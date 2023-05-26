@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*--------------------*/
+/*Адаптив изображений*/
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; }
+
+
+/*====================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/*--------------------*/
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+/*@media (max-width: 1240px) {
+  .container {
+    max-width: 1064px; } }
+
+@media (max-width: 1064px) {
+  .container {
+    max-width: 807px; } }*/
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+    padding: 0 15px; } }
+
+
+
+
+
+/* =================================================================
+   Начало - "header"
+   ===============================================================*/
+.header {
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
+}
+.container {}
+.header__wrapper {
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  flex: 0 0 12%;
+}
+.header__logo img{
+  width: 100%;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*============================*/
+.header-link {
+  margin-right: 12px;
+  padding: 35px 16px;
+  position: relative;
+}
+.header-link__img-one {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.header-link__img-two {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 50%;
+
+}
+.header-link:last-child {
+  margin-right: 0px;
+}
+.header-link a{
+  font-size: 17px;
+  font-family: 'Rubik', sans-serif;
+  color: rgba(8, 35, 59, 1);
+}
+
+
+.header-link.active {
+  background: #e9f7eb;
+}
+
+
+/*=============================*/
+
+
+
+
+.header__buttons {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  flex: 0 0 248px;
+}
+.header-leave {
+  flex: 0 0 75px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  color: rgba(8, 35, 59, 1);
+  margin-right: 12px;
+
+
+}
+.header-leave__img {
+  margin-right: 4px;
+}
+.header-join {
+  flex: 0 0 158px;
+  padding: 15px 10px;
+  border: 2px solid rgba(255, 214, 0, 1);
+  color: rgba(8, 35, 59, 1);
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  border-radius: 7px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-join__img {
+  margin-right: 4px;
+}
+
+
+
+@media (max-width: 1064px) {
+  .header {
+    padding: 10px 0;
+  }
+  .header__body {
+    max-height: 0;
+    max-width: 0;
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .header__logo {
+    flex: 0 0 85px;
+  }
+  .header__buttons {
+    flex: 0 0 152px;
+  }
+  .header-leave {
+    flex: 0 0 16px;
+    font-size: 0;
+  }
+  .header-join {
+    flex: 0 0 120px;
+    padding: 10px 5px;
+    border: 2px solid rgba(255, 214, 0, 1);
+    font-size: 12px;
+    border-radius: 5px;
+  }
+}
+/* =================================================================
+   Конец - "header"
+   ===============================================================*/
+
+
+
+
+
+/* =================================================================
+   Начало - "index-block"
+   ===============================================================*/
+.index-block {
+  background: #20AC2E;
+  padding-top: 100%;
+}
+@media (min-width: 1520px) {
+  .index-block {
+    padding-top: 600px;
+  }
+}
+/* =================================================================
+   Конец - "index-block"
+   ===============================================================*/
+
+
+
+
+
+/* =================================================================
+   Начало - ""
+   ===============================================================*/
+
+/* =================================================================
+   Конец - ""
+   ===============================================================*/
